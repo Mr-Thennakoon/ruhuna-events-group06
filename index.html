@@ -329,7 +329,12 @@
             background-color: #ffffff;
         }
 
-        .faculty-grid,
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
         .category-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -522,7 +527,9 @@
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .faculty-grid,
+            .faculty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .category-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -657,54 +664,46 @@
                 <!-- Card 1 -->
                 <div class="event-card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80" alt="Sample event">
+                        <img src="Samprapthi.jpg" alt="Sample event">
                     </div>
                     <div class="card-body">
                         <span class="badge badge-purple">Cultural</span>
-                        <span class="badge badge-cyan">Faculty of Technology</span>
+                        <span class="badge badge-cyan">Faculty of Science</span>
                         <h3>Sample event</h3>
-                        <p class="desc">Sample university events description and connect with your campus...</p>
-                        <p class="meta"><strong>Date:</strong> 15 Aug. 2023</p>
-                        <p class="meta"><strong>Venue:</strong> Ruhuna, Ruhuna</p>
+                        <p class="desc"><b>"සම්ප්‍රාප්ති"</b></p>
+                        <p class="meta"><strong>Date:</strong> 07 Oct. 2026</p>
+                        <p class="meta"><strong>Venue:</strong> Ruhuna University</p>
                         <a href="#" class="view-details">View Details &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="event-card">
-                    <div class="card-img poster-dark">
-                        <div class="poster-box">
-                            <span>SAMPLE</span>
-                            <span>EVENT</span>
-                            <small>Singing</small>
-                        </div>
+                    <div class="card-img">
+                        <img src="sarasavi.jpg" alt="Sample event">
                     </div>
                     <div class="card-body">
                         <span class="badge badge-purple">Cultural</span>
-                        <span class="badge badge-cyan">Faculty of Technology</span>
-                        <h3>Sample event 2023</h3>
-                        <p class="desc">Sample university events explore new opportunities, with your communi...</p>
-                        <p class="meta"><strong>Date:</strong> 19 Aug. 2023</p>
-                        <p class="meta"><strong>Venue:</strong> Ruhuna, Ruhuna</p>
+                        <span class="badge badge-cyan">Faculty of Science</span>
+                        <h3>Sample event</h3>
+                        <p class="desc"><b>"සරසවි සිරස"</b></p>
+                        <p class="meta"><strong>Date:</strong> 04 Nov. 2026</p>
+                        <p class="meta"><strong>Venue:</strong> Ruhuna University</p>
                         <a href="#" class="view-details">View Details &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="event-card">
-                    <div class="card-img poster-red">
-                        <div class="poster-box">
-                            <span>SAMPLE</span>
-                            <span>EVENTS</span>
-                            <small>2023</small>
-                        </div>
+                    <div class="card-img">
+                        <img src="faculty.jpg" alt="Sample event">
                     </div>
                     <div class="card-body">
                         <span class="badge badge-purple">Cultural</span>
-                        <span class="badge badge-cyan">Faculty of Technology</span>
-                        <h3>Sample event 2022</h3>
-                        <p class="desc">Sample university events explore new opportunities, with your communi...</p>
-                        <p class="meta"><strong>Date:</strong> 19 Aug. 2023</p>
+                        <span class="badge badge-cyan">Faculty of Science</span>
+                        <h3>Sample event</h3>
+                        <p class="desc"><b>"Science Faculty Day"</b></p>
+                        <p class="meta"><strong>Date:</strong> 21 Oct. 2026</p>
                         <p class="meta"><strong>Venue:</strong> Ruhuna, Ruhuna</p>
                         <a href="#" class="view-details">View Details &rarr;</a>
                     </div>
@@ -722,14 +721,13 @@
             </div>
             <div class="faculty-grid">
                 <a href="#" class="pill-btn"><i class="fa-solid fa-laptop-code icon-blue"></i> Faculty of Science</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-teal"></i> Faculty of Engeneerin</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-teal"></i> Faculty of Engineering</a>
                 <a href="#" class="pill-btn"><i class="fa-solid fa-building-columns icon-purple"></i> Faculty of Medicine</a>
                 <a href="#" class="pill-btn"><i class="fa-solid fa-flask icon-amber"></i> Faculty of Management</a>
-
                 <a href="#" class="pill-btn"><i class="fa-solid fa-atom icon-cyan"></i> Faculty of Technology</a>
                 <a href="#" class="pill-btn"><i class="fa-solid fa-gears icon-orange"></i> Faculty of Agriculture</a>
                 <a href="#" class="pill-btn"><i class="fa-solid fa-leaf icon-green"></i> Faculty of Arts</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-leaf icon-green"></i> Fisheries and Marine science</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-water icon-rose"></i> Fisheries and Marine Science</a>
             </div>
         </div>
     </section>
