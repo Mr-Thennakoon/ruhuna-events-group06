@@ -9,6 +9,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        
         * {
             margin: 0;
             padding: 0;
@@ -17,8 +18,8 @@
         }
 
         body {
-            background-color: #111119;
-            color: #ffffff;
+            background-color: #f8f7fc;
+            color: #1e152b;
             line-height: 1.5;
         }
 
@@ -31,8 +32,8 @@
         /* Primary Pill Button */
         .btn-primary {
             display: inline-block;
-            background-color: #f3b562;
-            color: #111119;
+            background-color: #3b145e;
+            color: #ffffff;
             padding: 10px 20px;
             border-radius: 50px;
             font-size: 0.88rem;
@@ -42,15 +43,15 @@
         }
 
         .btn-primary:hover {
-            background-color: #e5a34b;
+            background-color: #562187;
             transform: translateY(-1px);
         }
 
         /* Navbar */
         .navbar {
-            background-color: #0d0d14;
+            background-color: #ffffff;
             padding: 16px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(74, 29, 124, 0.12);
         }
 
         .nav-container {
@@ -67,7 +68,7 @@
 
         .logo-icon {
             font-size: 1.8rem;
-            color: #f3b562;
+            color: #4a1d7c;
         }
 
         .logo-text {
@@ -80,13 +81,13 @@
             font-weight: 800;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
-            color: #ffffff;
+            color: #2c1747;
         }
 
         .logo-text .sub-brand {
             font-size: 0.62rem;
             letter-spacing: 3px;
-            color: #b0b0c0;
+            color: #5c467a;
             margin-top: 2px;
         }
 
@@ -96,7 +97,7 @@
         }
 
         .nav-links a {
-            color: #a0a0b5;
+            color: #2b2638;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -107,7 +108,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: #6c63ff;
+            color: #4a1d7c;
         }
 
         .nav-links a.active::after {
@@ -117,47 +118,531 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #6c63ff;
+            background-color: #4a1d7c;
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            background: url('') center/cover no-repeat;
+            background: #f4f1fa url('ruhuna_events.jpeg') center/cover no-repeat;
             padding: 95px 0 105px;
-            border-bottom: 2px solid #f3b562;
+            border-bottom: 2px solid #4a1d7c;
+            color: #1e152b;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(248, 247, 252, 0.90) 0%, rgba(244, 241, 250, 0.58) 48%, rgba(248, 247, 252, 0.08) 100%);
         }
 
-        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #1e152b;
+        }
+
+        .hero-content h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #2c1747;
+            text-shadow: 0 1px 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-content h2 {
+            color: #4a1d7c;
+            text-shadow: 0 1px 10px rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-content p {
+            font-size: 0.98rem;
+            font-weight: 500;
+            color: #2c253b;
+            margin-bottom: 28px;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Featured Events */
+        .featured-events {
+            padding: 48px 0 36px;
+            background-color: #ffffff;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: #2c1747;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .event-card {
+            background-color: #ffffff;
+            color: #1e152b;
+            border: 1px solid rgba(74, 29, 124, 0.14);
+            border-radius: 14px;
+            padding: 12px;
+            display: flex;
+            gap: 14px;
+            box-shadow: 0 8px 24px rgba(44, 23, 71, 0.08);
+        }
+
+        .card-img {
+            width: 44%;
+            min-height: 185px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Poster Styles for Cards 2 & 3 */
+        .poster-dark {
+            background: linear-gradient(135deg, #4a1d7c, #240c3d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .poster-red {
+            background: linear-gradient(135deg, #6d28d9, #3b145e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .poster-box {
+            display: flex;
+            flex-direction: column;
+            font-weight: 800;
+            font-size: 1.15rem;
+            line-height: 1.15;
+        }
+
+        .poster-box small {
+            font-size: 0.75rem;
+            font-weight: 400;
+            margin-top: 6px;
+            opacity: 0.85;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .badge {
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .badge-purple {
+            background-color: #4a1d7c;
+        }
+
+        .badge-cyan {
+            background-color: #7c3aed;
+        }
+
+        .card-body h3 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            margin: 4px 0 6px;
+            color: #1e152b;
+        }
+
+        .card-body .desc {
+            font-size: 0.76rem;
+            color: #524d63;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-body .meta {
+            font-size: 0.75rem;
+            color: #2f293d;
+            margin-bottom: 2px;
+        }
+
+        .view-details {
+            margin-top: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #4a1d7c;
+            text-decoration: none;
+        }
+
+        .view-details:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Divider Lines */
+        .divider-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .divider-title::before,
+        .divider-title::after {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background-color: #8b6bb5;
+        }
+
+        .divider-title span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            color: #4a1d7c;
+        }
+
+        /* Browse Sections */
+        .browse-section {
+            padding: 20px 0;
+            background-color: #ffffff;
+        }
+
+        .faculty-grid,
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+        }
+
+        .pill-btn {
+            background-color: #f3effa;
+            color: #2c1747;
+            border: 1px solid rgba(74, 29, 124, 0.22);
+            text-decoration: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 6px rgba(74, 29, 124, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+
+        .pill-btn:hover {
+            background-color: #eae2f8;
+            border-color: rgba(74, 29, 124, 0.42);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(74, 29, 124, 0.16);
+        }
+
+        .pill-btn i {
+            font-size: 1rem;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        /* Icon Colors */
+        .icon-blue { color: #3b82f6; }
+        .icon-teal { color: #14b8a6; }
+        .icon-purple { color: #4a1d7c; }
+        .icon-amber { color: #d97706; }
+        .icon-cyan { color: #06b6d4; }
+        .icon-orange { color: #ea580c; }
+        .icon-rose { color: #e11d48; }
+        .icon-indigo { color: #5b21b6; }
+        .icon-green { color: #16a34a; }
+        .icon-lime { color: #65a30d; }
+        .icon-pink { color: #db2777; }
+        .icon-violet { color: #7e22ce; }
+
+        /* Why Ruhuna Events */
+        .why-section {
+            padding: 36px 0 55px;
+            background-color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #f3effa;
+            color: #4a1d7c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #1e152b;
+        }
+
+        .feature-text p {
+            font-size: 0.8rem;
+            color: #524d63;
+            line-height: 1.45;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(90deg, #2d0f4a 0%, #3e1663 50%, #260d3d 100%);
+            color: #ffffff;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 28px;
+        }
+
+        .footer-brand p {
+            font-size: 0.78rem;
+            color: #e4d8f5;
+            margin-top: 8px;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-links h4 {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .links-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+
+        .links-row a {
+            color: #f3ebff;
+            text-decoration: none;
+        }
+
+        .links-row a:hover {
+            text-decoration: underline;
+        }
+
+        .links-row span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-socials a {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .footer-socials a:hover {
+            background-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 14px 0;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #d8c8f0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .faculty-grid,
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .cards-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .faculty-grid,
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .footer-divider {
+                display: none;
+            }
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 5%;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .logo-img {
+            width: 34px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .logo-text {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            line-height: 1.15 !important;
+        }
+
+        .brand {
+            display: block !important;
+            font-size: 14px !important;
+            font-weight: 800 !important;
+            color: #2c1747 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            letter-spacing: 0.8px !important;
+        }
+
+        .sub-brand {
+            display: block !important;
+            font-size: 7.5px !important;
+            font-weight: 600 !important;
+            color: #4a356d !important;
+            letter-spacing: 2.5px !important;
+            margin-top: 2px !important;
+        }
+
+        .footer .brand {
+            color: #ffffff !important;
+        }
+
+        .footer .sub-brand {
+            color: #e4d8f5 !important;
+        }
     </style>
 
 </head>
 <body>
  <!-- Navbar -->
     <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-hands-holding-circle logo-icon"></i>
-                <div class="logo-text">
-                    <span class="brand">RUHUNA</span>
-                    <span class="sub-brand">E V E N T S</span>
-                </div>
-            </div>
-            <nav class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Events</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
-            <a href="#" class="btn-primary">Explore Events &rarr;</a>
+    <div class="container nav-container">
+      <div class="logo">
+        
+        <img src="RuhLogo.png" alt="University of Ruhuna logo" class="logo-img">
+        <div class="logo-text">
+          <span class="brand">RUHUNA</span>
+          <span class="sub-brand">E V E N T S</span>
         </div>
-    </header>
+      </div>
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About</a>
+        <a href="#">Event Details</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <a href="#" class="btn-primary">Explore Events &rarr;</a>
+    </div>
+  </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>Every Moment at<br>Ruhuna Has a Story.</h1>
+            <h1>RUHUNA EVENTS</h1><br>
+            <h2>Every Moment at<br>Ruhuna Has a Story.</h2>
             <p>Discover university events, explore new opportunities,<br>and connect with your campus community.</p>
             <a href="#" class="btn-primary">Explore Events &rarr;</a>
         </div>
@@ -236,19 +721,15 @@
                 <span>BROWSE BY FACULTY</span>
             </div>
             <div class="faculty-grid">
-                <a href="#" class="pill-btn"><i class="fa-solid fa-laptop-code icon-blue"></i> Faculty of Technology</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-teal"></i> Faculty of Technology</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-building-columns icon-purple"></i> Faculty of Technology</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-flask icon-amber"></i> Faculty of Science</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-laptop-code icon-blue"></i> Faculty of Science</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-teal"></i> Faculty of Engeneerin</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-building-columns icon-purple"></i> Faculty of Medicine</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-flask icon-amber"></i> Faculty of Management</a>
+
                 <a href="#" class="pill-btn"><i class="fa-solid fa-atom icon-cyan"></i> Faculty of Technology</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-gears icon-orange"></i> Faculty of Technology</a>
-                
-                <a href="#" class="pill-btn"><i class="fa-solid fa-dna icon-rose"></i> Faculty of Sciences</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-medal icon-indigo"></i> Faculty of Sport</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-gears icon-orange"></i> Faculty of Agriculture</a>
                 <a href="#" class="pill-btn"><i class="fa-solid fa-leaf icon-green"></i> Faculty of Arts</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-graduation-cap icon-lime"></i> Faculty of Education</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-users icon-pink"></i> Faculty of Social</a>
-                <a href="#" class="pill-btn"><i class="fa-solid fa-globe icon-violet"></i> Faculty of Agriculture</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-leaf icon-green"></i> Fisheries and Marine science</a>
             </div>
         </div>
     </section>
