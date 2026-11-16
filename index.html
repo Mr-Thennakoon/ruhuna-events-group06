@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhuna Events</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==============================
+           GLOBAL STYLES
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FAF9FC;
+            color: #292431;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==============================
+           BUTTONS
+        ============================== */
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #8B2BE2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #6F1BC1;
+            transform: translateY(-1px);
+        }
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        .navbar {
+            background-color: #FAF9FC;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(139, 43, 226, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 5%;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .logo-img {
+            width: 34px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.15;
+        }
+
+        .brand {
+            display: block;
+            font-size: 14px;
+            font-weight: 800;
+            color: #321052;
+            letter-spacing: 0.8px;
+        }
+
+        .sub-brand {
+            display: block;
+            font-size: 7.5px;
+            font-weight: 600;
+            color: #8B2BE2;
+            letter-spacing: 2.5px;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: #292431;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-bottom: 6px;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8B2BE2;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #8B2BE2;
+        }
+
+        /* ==============================
+           HERO SECTION
+        ============================== */
+
+        .hero {
+            position: relative;
+            background: #F3E9FC url('ruhuna_events.jpeg') center/cover no-repeat;
+            padding: 95px 0 105px;
+            border-bottom: 2px solid #8B2BE2;
+            color: #321052;
+            filter: saturate(1.35) contrast(1.4);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(250, 249, 252, 0.7) 0%,
+                rgba(243, 233, 252, 0.42) 48%,
+                rgba(250, 249, 252, 0.02) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #321052;
+        }
+
+        .hero-content h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #321052;
+            text-shadow: 0 1px 12px rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-content h2 {
+            color: #8B2BE2;
+            text-shadow: 0 1px 10px rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-content p {
+            font-size: 0.98rem;
+            font-weight: 500;
+            color: #292431;
+            margin-bottom: 28px;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.9);
+        }
+
+        /* ==============================
+           FEATURED EVENTS
+        ============================== */
+
+        .featured-events {
+            padding: 48px 0 36px;
+            background-color: #FAF9FC;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: #321052;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .event-card {
+            background-color: #EDE1FA;
+            color: #292431;
+            border: 1px solid rgba(139, 43, 226, 0.18);
+            border-radius: 14px;
+            padding: 12px;
+            display: flex;
+            gap: 14px;
+            box-shadow: 0 8px 24px rgba(50, 16, 82, 0.08);
+        }
+
+        .card-img {
+            width: 44%;
+            min-height: 185px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Event Posters */
+
+        .poster-dark,
+        .poster-red {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .poster-dark {
+            background: linear-gradient(135deg, #8B2BE2, #1C0B2B);
+        }
+
+        .poster-red {
+            background: linear-gradient(135deg, #FF791F, #8B2BE2);
+        }
+
+        .poster-box {
+            display: flex;
+            flex-direction: column;
+            font-weight: 800;
+            font-size: 1.15rem;
+            line-height: 1.15;
+        }
+
+        .poster-box small {
+            font-size: 0.75rem;
+            font-weight: 400;
+            margin-top: 6px;
+            opacity: 0.85;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .badge {
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .badge-purple {
+            background-color: #8B2BE2;
+        }
+
+        .badge-cyan {
+            background-color: #FF791F;
+        }
+
+        .card-body h3 {
+            font-size: 1.02rem;
+            font-weight: 700;
+            margin: 4px 0 6px;
+            color: #321052;
+        }
+
+        .card-body .desc {
+            font-size: 0.76rem;
+            color: #62596D;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-body .meta {
+            font-size: 0.75rem;
+            color: #292431;
+            margin-bottom: 2px;
+        }
+
+        .view-details {
+            margin-top: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #8B2BE2;
+            text-decoration: none;
+        }
+
+        .view-details:hover {
+            text-decoration: underline;
+        }
+
+        /* ==============================
+           SECTION DIVIDERS
+        ============================== */
+
+        .divider-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .divider-title::before,
+        .divider-title::after {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background-color: #B58AE0;
+        }
+
+        .divider-title span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            color: #8B2BE2;
+        }
+
+        /* ==============================
+           BROWSE SECTIONS
+        ============================== */
+
+        .browse-section {
+            padding: 20px 0;
+            background-color: #FAF9FC;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+        }
+
+        .pill-btn {
+            background-color: #EDE1FA;
+            color: #321052;
+            border: 1px solid rgba(139, 43, 226, 0.22);
+            text-decoration: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 6px rgba(139, 43, 226, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+
+        .pill-btn:hover {
+            background-color: #E2CCF8;
+            border-color: #8B2BE2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(139, 43, 226, 0.16);
+        }
+
+        .pill-btn i {
+            font-size: 1rem;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FAF9FC;
+            flex-shrink: 0;
+        }
+
+        /* Icon Colours */
+
+        .icon-blue,
+        .icon-teal,
+        .icon-purple,
+        .icon-amber,
+        .icon-cyan,
+        .icon-indigo,
+        .icon-violet {
+            color: #8B2BE2;
+        }
+
+        .icon-orange {
+            color: #FF791F;
+        }
+
+        .icon-rose,
+        .icon-pink {
+            color: #D9468D;
+        }
+
+        .icon-green,
+        .icon-lime {
+            color: #39966B;
+        }
+
+        /* ==============================
+           WHY RUHUNA EVENTS
+        ============================== */
+
+        .why-section {
+            padding: 36px 0 55px;
+            background-color: #FAF9FC;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #EDE1FA;
+            color: #8B2BE2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #321052;
+        }
+
+        .feature-text p {
+            font-size: 0.8rem;
+            color: #62596D;
+            line-height: 1.45;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        .footer {
+            background: linear-gradient(
+                90deg,
+                #1C0B2B 0%,
+                #321052 50%,
+                #1C0B2B 100%
+            );
+            color: #ffffff;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer .brand {
+            color: #ffffff;
+        }
+
+        .footer .sub-brand {
+            color: #EDE1FA;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 28px;
+        }
+
+        .footer-brand p {
+            font-size: 0.78rem;
+            color: #EDE1FA;
+            margin-top: 8px;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-links h4 {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .links-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+
+        .links-row a {
+            color: #EDE1FA;
+            text-decoration: none;
+        }
+
+        .links-row a:hover {
+            text-decoration: underline;
+        }
+
+        .links-row span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-socials a {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background-color: rgba(139, 43, 226, 0.35);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .footer-socials a:hover {
+            background-color: #8B2BE2;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 14px 0;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #EDE1FA;
+        }
+
+        /* ==============================
+           RESPONSIVE DESIGN
+        ============================== */
+
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .cards-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-grid,
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="RuhLogo.png" alt="University of Ruhuna logo" class="logo-img">
+
+                <div class="logo-text">
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Events</a>
+                <a href="#">About</a>
+                <a href="#">Event Details</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <a href="#" class="btn-primary">Explore Events &rarr;</a>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>RUHUNA EVENTS</h1>
+            <br>
+
+            <h2>Every Moment at<br>Ruhuna Has a Story.</h2>
+
+            <p>
+                Discover university events, explore new opportunities,<br>
+                and connect with your campus community.
+            </p>
+
+            <a href="#" class="btn-primary">Explore Events &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+        <div class="container">
+
+            <h2 class="section-heading">FEATURED EVENTS</h2>
+
+            <div class="cards-grid">
+
+                <!-- Card 1 -->
+                <div class="event-card">
+
+                    <div class="card-img">
+                        <img src="Samprapthi.jpg" alt="Sample event">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="badge badge-purple">Cultural</span>
+                        <span class="badge badge-cyan">Faculty of Science</span>
+
+                        <h3>Sample event</h3>
+
+                        <p class="desc"><b>"සම්ප්‍රාප්ති"</b></p>
+
+                        <p class="meta"><strong>Date:</strong> 07 Oct. 2026</p>
+                        <p class="meta"><strong>Venue:</strong> Ruhuna University</p>
+
+                        <a href="#" class="view-details">View Details &rarr;</a>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="event-card">
+
+                    <div class="card-img">
+                        <img src="sarasavi.jpg" alt="Sample event">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="badge badge-purple">Cultural</span>
+                        <span class="badge badge-cyan">Faculty of Science</span>
+
+                        <h3>Sample event</h3>
+
+                        <p class="desc"><b>"සරසවි සිරස"</b></p>
+
+                        <p class="meta"><strong>Date:</strong> 04 Nov. 2026</p>
+                        <p class="meta"><strong>Venue:</strong> Ruhuna University</p>
+
+                        <a href="#" class="view-details">View Details &rarr;</a>
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="event-card">
+
+                    <div class="card-img">
+                        <img src="faculty.jpg" alt="Sample event">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="badge badge-purple">Cultural</span>
+                        <span class="badge badge-cyan">Faculty of Science</span>
+
+                        <h3>Sample event</h3>
+
+                        <p class="desc"><b>"Science Faculty Day"</b></p>
+
+                        <p class="meta"><strong>Date:</strong> 21 Oct. 2026</p>
+                        <p class="meta"><strong>Venue:</strong> Ruhuna, Ruhuna</p>
+
+                        <a href="#" class="view-details">View Details &rarr;</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse By Faculty -->
+    <section class="browse-section">
+        <div class="container">
+
+            <div class="divider-title">
+                <span>BROWSE BY FACULTY</span>
+            </div>
+
+            <div class="faculty-grid">
+
+                <a href="#" class="pill-btn"><i class="fa-solid fa-laptop-code icon-blue"></i> Faculty of Science</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-teal"></i> Faculty of Engineering</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-building-columns icon-purple"></i> Faculty of Medicine</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-flask icon-amber"></i> Faculty of Management</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-atom icon-cyan"></i> Faculty of Technology</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-gears icon-orange"></i> Faculty of Agriculture</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-leaf icon-green"></i> Faculty of Arts</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-water icon-rose"></i> Fisheries and Marine Science</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse By Category -->
+    <section class="browse-section">
+        <div class="container">
+
+            <div class="divider-title">
+                <span>BROWSE BY CATEGORY</span>
+            </div>
+
+            <div class="category-grid">
+
+                <a href="#" class="pill-btn"><i class="fa-solid fa-graduation-cap icon-purple"></i> Academic</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-masks-theater icon-orange"></i> Cultural</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-basketball icon-green"></i> Sports</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-film icon-indigo"></i> Entertainment</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-microchip icon-cyan"></i> Technical</a>
+                <a href="#" class="pill-btn"><i class="fa-solid fa-user-group icon-rose"></i> Social</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Ruhuna Events -->
+    <section class="why-section">
+        <div class="container">
+
+            <div class="divider-title">
+                <span>WHY RUHUNA EVENTS</span>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div class="feature-text">
+                        <h4>Discover Events</h4>
+                        <p>Find upcoming events in one place where students can discover new and exciting opportunities.</p>
+                    </div>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+
+                    <div class="feature-text">
+                        <h4>Connect with Campus</h4>
+                        <p>Connect with the university's active community and become an engaged student across all faculties.</p>
+                    </div>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-hands-clapping"></i>
+                    </div>
+
+                    <div class="feature-text">
+                        <h4>Maximize Your University Experience</h4>
+                        <p>Explore new university experiences, seize opportunities, and take part in memorable campus life.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-top">
+
+            <div class="footer-brand">
+
+                <div class="logo-text">
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+                </div>
+
+                <p>
+                    Discover. Connect. Celebrate.<br>
+                    Make every moment memorable.
+                </p>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <div class="links-row">
+                    <a href="#">Home</a>
+                    <span>|</span>
+                    <a href="#">Events</a>
+                    <span>|</span>
+                    <a href="#">About</a>
+                    <span>|</span>
+                    <a href="#">Contact</a>
+                </div>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-socials">
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Ruhuna Events. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
