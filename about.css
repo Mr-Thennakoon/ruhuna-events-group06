@@ -13,7 +13,7 @@ span{
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    box-shadow: 0 2px 12px rgba(50, 16, 82, 0.08);
+    box-shadow: 0 2px 12px rgba(216, 61, 247, 0.08);
     position: relative;
     z-index: 10;
     box-sizing: border-box;
@@ -57,7 +57,7 @@ span{
 }
 
 .nav-links a {
-    color: var(--deep-purple);
+    color:rgb(131, 5, 131);
     font-size: 14px;
     font-weight: 600;
     transition: 0.3s;
