@@ -30,19 +30,7 @@
 
 .logo-icon {
     width: 42px;
-    hei.navbar {
-    width: 100%;
-    min-height: 75px;
-    padding: 12px 2.3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--white);
-    box-shadow: 0 2px 12px rgba(50, 16, 82, 0.08);
-    position: relative;
-    z-index: 10;
-    box-sizing: border-box;
-}ght: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +39,8 @@
     color: var(--primary-purple);
     font-size: 28px;
 }
+
+
 
 .logo-text {
     font-size: 23px;
@@ -156,3 +146,224 @@
     object-fit: cover;
     object-position: center;
 }
+
+/*  MAIN CONTENT  */
+
+.main-content {
+    padding: 1.19rem 2.3% 0.75rem;
+}
+
+
+/*  SEARCH AND FILTER  */
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9375rem;
+    margin-bottom: 1.1875rem;
+}
+
+.search-box {
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    border: 0.06rem solid #D1B5EA;
+    border-radius: 1.875rem;
+    background: white;
+    padding: 0 0.5rem 0 1.25rem;
+    flex: 1;
+    min-width: 13.125rem;
+}
+
+.search-box i {
+    font-size: 1.19rem;
+    color: #321052;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 0;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    color: #321052;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #9678B4;
+}
+
+.search-box button {
+    background: #750BC5;
+    border: none;
+    color: white;
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-divider {
+    width: 0.125rem;
+    height: 2.4rem;
+    background: #8B2BE2;
+    margin: 0 0.625rem;
+}
+
+.filter-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.filter-btn {
+    height: 2.57rem;
+    border: 0.0625rem solid #8B2BE2;
+    border-radius: 0.8125rem;
+    padding: 0 0.9375rem;
+    background: white;
+    color: #321052;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5625rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.filter-btn:hover,
+.filter-btn.selected {
+    background: #750BC5;
+    color: white;
+}
+
+.sort-box {
+    height: 2.5625rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.0625rem solid #D1B5EA;
+    background: white;
+    border-radius: 1.56rem;
+    padding: 0 0.8rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+.sort-box select {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #321052;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+
+/*  CATEGORY BANNERS */
+
+.category-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.125rem;
+    margin-bottom: 1.19rem;
+}
+
+.category-card {
+    height: 5.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.8125rem;
+    overflow: hidden;
+    position: relative;
+    color: #321052;
+    background-size: cover;
+    background-position: center;
+}
+
+.academic-category-gradguation-cap{
+    font-size: 5rem;
+}
+
+.academic-category {
+    background:
+    linear-gradient(90deg, rgba(220,172,255,.95), rgba(237,225,250,.68)),
+    url("image/workshop.jpeg") center/cover;
+}
+
+.sports-category-football{
+    font-size: 5rem;
+}
+
+.sports-category {
+    background:
+    linear-gradient(90deg, rgba(220,172,255,.88), rgba(237,225,250,.45)),
+    url("image/sports.jpeg") center/cover;
+}
+
+.cultural-category-image{
+    font-size: 5rem;
+}
+
+.cultural-category {
+    background:
+    linear-gradient(90deg, rgba(220,172,255,.90), rgba(237,225,250,.40)),
+    url("image/cultural_festival.jpeg") center/cover;
+}
+
+.social-category-image{
+    font-size: 5rem;
+}
+
+.social-category {
+    background:
+    linear-gradient(90deg, rgba(220,172,255,.90), rgba(237,225,250,.40)),
+    url("image/social.jpeg") center/cover;
+}
+
+.category-card > i {
+    font-size: 2.625rem;
+    min-width: 4.375rem;
+    text-align: center;
+}
+
+.category-card h3 {
+    font-size: 0.9375rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.category-card p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-top: 0.1875rem;
+}
+
+.category-arrow {
+    position: absolute;
+    right: 0.625rem;
+    bottom: 0.75rem;
+    background: #321052;
+    color: white;
+    border-radius: 50%;
+    width: 1.4375rem;
+    height: 1.4375rem;
+    text-align: center;
+    font-size: 1.4375rem;
+    line-height: 1.1875rem;
+}
+
+.big-emoji{
+    font-size: 2rem;
+}
+
+
