@@ -5,6 +5,88 @@ body{
 span{
     color: #b41bb9;
 }
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 2.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 12px rgba(50, 16, 82, 0.08);
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: purple;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 156, 245);
+    border-radius: 50%;
+    color: rgb(158, 11, 158);
+    font-size: 28px;
+}
+
+.logo-text {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 1px;
+}
+
+.logo-text small {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--deep-purple);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+.nav-button {
+    background-color: #6B21a8;
+    color: white;
+    padding:12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.explorebtn{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: purple;
+    transform: translateY(-2px);
+}
+
 .header{
     font-size: 13px;
     font-weight:bold;
@@ -54,7 +136,7 @@ span{
     flex-shrink: 0;
 }
 .Info:hover{
-    background: #6515a5;
+    background: #f3ad2c;
     color: white;
 }
 .Icon{
@@ -104,11 +186,13 @@ span{
 }
 .uniImage{
     flex: 1;
+    border: 3px purple;
 }
 .uniImage img{
     width: 100%;
     height: 309px;
     object-fit: cover;
+    border: 3px purple;
     border-radius: 15px;
 }
 .mainBox{
@@ -174,6 +258,7 @@ span{
 }
 #col{
     color: #381852;
+    font-size: 15px;
 }
 #heading{
     font-size: 25px;
@@ -198,4 +283,132 @@ span{
 .aboutpar{
     width: 40%;
 }
+.eventpic{
+    width: 40%;
+    flex-shrink: 0;
+}
+.eventpic img{
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: perspective(200px) rotateY(-10deg);
+    border: #6e0b77;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(100, 8, 80, 0.3);
+}
+.misvis{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e3d4e9;
+    text-align: left;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.mission,.vision{
+    flex: 1;
+    background: 25px rgb(231, 207, 163);
+    border-radius: 20px;
+    gap: 5px;
+    padding-left: 75px;
+    border: 3px rgb(236, 141, 16);
+    box-shadow: #c5bbbb;
+}
+.vision{
+    flex: 1;
+}
+.bottomPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: center;
+}
+.bottomPart div{
+    flex: 1;
+}
+.featB{
+    flex: 1;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    border: 1px solid #ea6ef5;
+}
+.mh1{
+    font-size: medium;
+
+}
+.footer {
+    background-color: var(--dark-purple);
+    color: var(--white);
+}
+
+.footer-content {
+    padding: 45px 9%;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.footer-logo small {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #D9C9E5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 5px;
+    color: var(--orange);
+    font-size: 15px;
+}
+
+.footer-links a,
+.footer-contact p {
+    color: #E4D8ED;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--orange);
+}
+
+.footer-bottom {
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #D9C9E5;
+    font-size: 11px;
+}
+
 
