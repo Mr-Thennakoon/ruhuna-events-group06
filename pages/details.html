@@ -1,94 +1,231 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Event Details | Ruhuna Events</title>
 
+    <!-- Use the same fonts and icon library as the Home page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="../css/details.css">
+    <link rel="stylesheet" href="../css/common.css">
+
 </head>
 <body>
 
+    <!-- Shared navigation: same structure and styling as Home -->
     <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" aria-label="Ruhuna Events Home">
+                <img src="../assets/RuhLogo.png" alt="University of Ruhuna logo" class="logo-img">
+                <span class="logo-text">
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+                </span>
+            </a>
 
-        <a href="../index.html" class="logo">
-            <span class="logo-icon">✦</span>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="../event.html">Events</a>
+                <a href="../about.html">About</a>
+                <a href="details.html" class="active" aria-current="page">Event Details</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
 
-            <span class="logo-text">
-                RUHUNA
-                <small>EVENTS</small>
-            </span>
-        </a>
-
-        <nav class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <a href="events.html" class="nav-button">
-            Explore Events →
-        </a>
-
+            <a href="../event.html" class="btn-primary">Explore Events &rarr;</a>
+        </div>
     </header>
-     <footer class="footer">
 
-        <div class="footer-content">
+    <main>
+        <!-- Page heading -->
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow"><i class="fa-regular fa-calendar-check"></i> EVENT INFORMATION</p>
+                <h1>Discover the Details</h1>
+                <p>Everything you need to know before you take part in a Ruhuna event.</p>
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <a href="../event.html">Events</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span>Event Details</span>
+                </div>
+            </div>
+        </section>
 
-            <div class="footer-brand">
+        <!-- Main event information -->
+        <section class="event-details-section">
+            <div class="container">
 
-                <a href="../index.html" class="footer-logo">
-                    RUHUNA
-                    <small>EVENTS</small>
-                </a>
+                <div class="event-layout">
+                    <div class="event-main">
 
-                <p>
-                    Discover. Connect. Participate.
-                    <br>
-                    Make every university moment memorable.
-                </p>
+                        <!-- Event poster / banner image -->
+                        <div class="event-image-wrap">
+                            <!-- Replace Samprapthi.jpg with the relevant event poster when available. -->
+                            <img src="../assets/Samprapthi.jpg" alt="Event poster" class="event-image">
+                            <span class="image-label"><i class="fa-regular fa-image"></i> EVENT POSTER</span>
+                        </div>
+
+                        <div class="event-heading">
+                            <div class="event-tags">
+                                <span class="tag tag-purple">Event Category</span>
+                                <span class="tag tag-orange">University of Ruhuna</span>
+                            </div>
+                            <h2>Event Name Goes Here</h2>
+                            <p class="event-intro">
+                                Add a short introduction that tells students what this event is about
+                                and why they should be interested in attending.
+                            </p>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><span class="heading-icon"><i class="fa-solid fa-circle-info"></i></span> About This Event</h3>
+                            <p>
+                                Write the full event description here. Explain the purpose of the event,
+                                what participants can expect, and who is welcome to attend. Keep the
+                                information clear and useful for students.
+                            </p>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><span class="heading-icon"><i class="fa-solid fa-star"></i></span> Event Highlights</h3>
+                            <ul class="highlight-list">
+                                <li><i class="fa-solid fa-check"></i> Add the main activity or attraction.</li>
+                                <li><i class="fa-solid fa-check"></i> Mention performances, sessions or competitions.</li>
+                                <li><i class="fa-solid fa-check"></i> Include any special opportunities for students.</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3><span class="heading-icon"><i class="fa-solid fa-clipboard-list"></i></span> Important Information</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <span class="info-label">Organized by</span>
+                                    <strong>Organizer / Faculty Name</strong>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Suitable for</span>
+                                    <strong>University Students</strong>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Entry fee</span>
+                                    <strong>Update entry information</strong>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Registration</span>
+                                    <strong>Update registration information</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event summary sidebar -->
+                    <aside class="event-sidebar">
+                        <div class="summary-card">
+                            <span class="summary-kicker">EVENT AT A GLANCE</span>
+                            <h3>Event Information</h3>
+
+                            <div class="summary-row">
+                                <span class="summary-icon"><i class="fa-regular fa-calendar"></i></span>
+                                <div>
+                                    <small>Date</small>
+                                    <strong>Add event date</strong>
+                                </div>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-icon"><i class="fa-regular fa-clock"></i></span>
+                                <div>
+                                    <small>Time</small>
+                                    <strong>Add starting and ending time</strong>
+                                </div>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div>
+                                    <small>Venue</small>
+                                    <strong>Add event venue</strong>
+                                </div>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-icon"><i class="fa-solid fa-building-columns"></i></span>
+                                <div>
+                                    <small>Faculty / Organizer</small>
+                                    <strong>Add faculty or organizer</strong>
+                                </div>
+                            </div>
+
+                            <a href="../contact.html" class="btn-primary summary-button">Contact the Organizers <i class="fa-solid fa-arrow-right"></i></a>
+                            <p class="summary-note">Update the event information and contact link before publishing.</p>
+                        </div>
+
+                        <div class="help-card">
+                            <div class="help-icon"><i class="fa-regular fa-circle-question"></i></div>
+                            <h3>Have a question?</h3>
+                            <p>Need more information about this event? Get in touch with the organizing team.</p>
+                            <a href="../contact.html">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="back-link-wrap">
+                    <a href="../event.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to All Events</a>
+                </div>
 
             </div>
+        </section>
+    </main>
 
+    <!-- Shared footer: same structure and styling as Home -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+                </div>
+                <p>
+                    Discover. Connect. Celebrate.<br>
+                    Make every moment memorable.
+                </p>
+            </div>
+
+            <div class="footer-divider"></div>
 
             <div class="footer-links">
-
-                <h3>Quick Links</h3>
-
-                <a href="../index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-
+                <h4>Quick Links</h4>
+                <div class="links-row">
+                    <a href="../index.html">Home</a>
+                    <span>|</span>
+                    <a href="../event.html">Events</a>
+                    <span>|</span>
+                    <a href="../about.html">About</a>
+                    <span>|</span>
+                    <a href="../contact.html">Contact</a>
+                </div>
             </div>
 
+            <div class="footer-divider"></div>
 
-            <div class="footer-contact">
-
-                <h3>Get Connected</h3>
-
-                <p>University of Ruhuna</p>
-                <p>Ruhuna Events Platform</p>
-                <p>Contact information coming soon.</p>
-
+            <div class="footer-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-
         </div>
-
 
         <div class="footer-bottom">
-
-            <p>
-                © 2026 Ruhuna Events. All Rights Reserved.
-            </p>
-
+            <div class="container">
+                <p>&copy; 2026 Ruhuna Events. All Rights Reserved.</p>
+            </div>
         </div>
-
     </footer>
 
 </body>
-
 </html>
