@@ -1,0 +1,407 @@
+.section-padding {
+    padding: 75px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #8B2BE2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    color: #321052;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 span {
+    color: #8B2BE2;
+}
+
+.section-heading p {
+    color: #756B80;
+    font-size: 0.95rem;
+}
+
+.about-hero {
+    background: linear-gradient(
+        120deg,
+        #F1E8FA,
+        #FAF9FC,
+        #F3EAFB
+    );
+
+    padding: 65px 0;
+    overflow: hidden;
+    border-bottom: 2px solid #8B2BE2;
+}
+
+.about-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-hero-content {
+    padding: 20px 0;
+}
+
+.about-hero-content h1 {
+    color: #321052;
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+    line-height: 1.18;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.about-hero-content h1 span {
+    color: #8B2BE2;
+}
+
+.about-hero-content p {
+    color: #655B70;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 28px;
+}
+
+.about-hero-photo {
+    position: relative;
+}
+
+.about-hero-photo img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(50, 16, 82, 0.15);
+}
+
+.about-intro {
+    background-color: #FAF9FC;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.intro-copy {
+    background-color: #EDE1FA;
+    padding: 35px;
+    border-radius: 18px;
+    border-left: 5px solid #8B2BE2;
+}
+
+.intro-copy p {
+    color: #51445F;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.intro-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-image {
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.4s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.04);
+}
+
+.purpose-section {
+    background-color: #F3EAFB;
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.purpose-card {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(139, 43, 226, 0.12);
+    box-shadow: 0 8px 25px rgba(50, 16, 82, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purpose-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(50, 16, 82, 0.12);
+}
+
+.purpose-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #EDE1FA;
+    color: #8B2BE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.purpose-card h3 {
+    color: #321052;
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.purpose-card p {
+    color: #756B80;
+    font-size: 0.92rem;
+    line-height: 1.9;
+}
+
+.offer-section {
+    background-color: #FAF9FC;
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.offer-card {
+    background-color: #FFFFFF;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 6px 22px rgba(50, 16, 82, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(50, 16, 82, 0.14);
+}
+
+.offer-card > img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.offer-card-content {
+    padding: 20px;
+    position: relative;
+}
+
+.offer-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #8B2BE2;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.offer-card-content h3 {
+    color: #321052;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.offer-card-content p {
+    color: #756B80;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+.why-about {
+    background-color: #F3EAFB;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.benefit-item {
+    background-color: #FFFFFF;
+    padding: 25px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(139, 43, 226, 0.12);
+    box-shadow: 0 5px 18px rgba(50, 16, 82, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDE1FA;
+    color: #8B2BE2;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.benefit-item h3 {
+    color: #321052;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    color: #756B80;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.about-cta {
+    background: linear-gradient(
+        110deg,
+        #321052,
+        #61249A
+    );
+
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.about-cta h2 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-cta p {
+    color: #EDE1FA;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.about-cta .btn-primary {
+    background-color: #FF791F;
+    color: #FFFFFF;
+}
+
+.about-cta .btn-primary:hover {
+    background-color: #E96A12;
+}
+
+@media (max-width: 1024px) {
+
+    .offer-grid,
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-hero-inner,
+    .intro-grid {
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .about-hero-inner,
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-content {
+        text-align: center;
+    }
+
+    .about-hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-hero-photo img {
+        height: 280px;
+    }
+
+    .intro-image img {
+        height: 250px;
+    }
+
+    .purpose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .about-cta h2 {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .offer-grid,
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro-copy,
+    .purpose-card {
+        padding: 25px;
+    }
+
+    .about-hero-photo img {
+        height: 220px;
+    }
+
+}

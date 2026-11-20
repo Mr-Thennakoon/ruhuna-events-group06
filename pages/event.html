@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Ruhuna Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="stylesheet" href="../css/event.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="../assets/RuhLogo.png" alt="University of Ruhuna logo" class="logo-img">
+
+                <div class="logo-text">
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+                </div>
+            </div>
+
+<nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="event.html" class="active">Events</a>
+    <a href="about.html">About</a>
+    <a href="details.html">Event Details</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<a href="event.html" class="btn-primary">Explore Events &rarr;</a>
+
+        </div>
+    </header>
+
+    <section class="events-hero">
+
+        <div class="events-hero-content">
+
+            <h1>
+                Explore University
+                <span>Events</span>
+            </h1>
+
+            <p>
+                Discover activities, workshops and experiences
+                <br>
+                at the University of Ruhuna.
+            </p>
+
+            <div class="hero-line"></div>
+
+        </div>
+
+        <div class="events-hero-image">
+
+            <img src="../assets/uni_image.png"
+                 alt="University Campus">
+
+        </div>
+
+    </section>
+
+    <main class="main-content">
+
+        <section class="filter-section">
+
+            <div class="search-box">
+
+                <input type="text"
+                       placeholder="Search for events..."
+                       aria-label="Search for events">
+
+                <button type="button">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="filter-divider"></div>
+
+
+            <div class="filter-buttons">
+
+                <button class="filter-btn selected" type="button">
+                    All
+                </button>
+
+                <button class="filter-btn" type="button">
+                    <span class="big-emoji">🎓</span>
+                    Academic
+                </button>
+
+                <button class="filter-btn" type="button">
+                    <span class="big-emoji">🏃</span>
+                    Sports
+                </button>
+
+                <button class="filter-btn" type="button">
+                    <span class="big-emoji">🎭</span>
+                    Cultural
+                </button>
+
+                <button class="filter-btn" type="button">
+                    <span class="big-emoji">👥</span>
+                    Social
+                </button>
+
+            </div>
+
+
+            <div class="sort-box">
+
+                <label for="event-sort">Sort by:</label>
+
+                <select id="event-sort">
+
+                    <option>Newest</option>
+                    <option>Oldest</option>
+                    <option>Upcoming</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <section class="category-section">
+
+
+            <div class="category academic-category">
+
+                <div class="category-icon">🎓</div>
+
+                <div>
+                    <h3>Academic Events</h3>
+                    <p>Seminars, workshops and conferences</p>
+                </div>
+
+                <span class="category-arrow">›</span>
+
+            </div>
+
+
+            <div class="category sports-category">
+
+                <div class="category-icon">⚽</div>
+
+                <div>
+                    <h3>Sports Events</h3>
+                    <p>Matches and competitions</p>
+                </div>
+
+                <span class="category-arrow">›</span>
+
+            </div>
+
+
+            <div class="category cultural-category">
+
+                <div class="category-icon">🎭</div>
+
+                <div>
+                    <h3>Cultural Events</h3>
+                    <p>Festivals and celebrations</p>
+                </div>
+
+                <span class="category-arrow">›</span>
+
+            </div>
+
+
+            <div class="category social-category">
+
+                <div class="category-icon">👥</div>
+
+                <div>
+                    <h3>Social Events</h3>
+                    <p>Volunteering and community activities</p>
+                </div>
+
+                <span class="category-arrow">›</span>
+
+            </div>
+
+        </section>
+
+        <section class="events-grid">
+
+            <article class="event-card">
+
+                <div class="event-image">
+
+                    <img src="../assets/workshop.jpeg"
+                         alt="Technology Innovation Workshop">
+
+                    <span class="event-tag academic-tag">
+                        Academic
+                    </span>
+
+                </div>
+
+                <div class="event-details">
+
+                    <h3>Technology Innovation Workshop</h3>
+
+                    <div class="event-info">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            25 November 2026
+                        </span>
+
+                        <span>
+                            Faculty of Science
+                        </span>
+
+                    </div>
+
+                    <p>
+                        A workshop for students interested in
+                        modern technologies and innovation.
+                    </p>
+
+                    <div class="event-actions">
+
+                        <a href="../pages/details.html">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="../pages/contact.html" class="register-btn">
+                            Register Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="event-card">
+
+                <div class="event-image">
+
+                    <img src="../assets/sports.jpeg"
+                         alt="Inter-Faculty Cricket Tournament">
+
+                    <span class="event-tag sports-tag">
+                        Sports
+                    </span>
+
+                </div>
+
+                <div class="event-details">
+
+                    <h3>Inter-Faculty Cricket Tournament</h3>
+
+                    <div class="event-info">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            28 November 2026
+                        </span>
+
+                        <span>
+                            University Grounds
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Show your skills in the annual cricket
+                        championship.
+                    </p>
+
+                    <div class="event-actions">
+
+                        <a href="../pages/details.html">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="../pages/contact.html" class="register-btn">
+                            Register Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="event-card">
+
+                <div class="event-image">
+
+                    <img src="../assets/cultural_festival.jpg"
+                         alt="Ruhuna Cultural Festival">
+
+                    <span class="event-tag cultural-tag">
+                        Cultural
+                    </span>
+
+                </div>
+
+                <div class="event-details">
+
+                    <h3>Ruhuna Cultural Festival</h3>
+
+                    <div class="event-info">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            02 December 2026
+                        </span>
+
+                        <span>
+                            Main Auditorium
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Experience the vibrant culture of
+                        our university.
+                    </p>
+
+                    <div class="event-actions">
+
+                        <a href="../pages/details.html">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="../pages/contact.html" class="register-btn">
+                            Register Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+            <article class="event-card">
+
+                <div class="event-image">
+
+                    <img src="../assets/social.jpeg"
+                         alt="Green Campus Initiative">
+
+                    <span class="event-tag social-tag">
+                        Social
+                    </span>
+
+                </div>
+
+                <div class="event-details">
+
+                    <h3>Green Campus Initiative</h3>
+
+                    <div class="event-info">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            05 December 2026
+                        </span>
+
+                        <span>
+                            Campus Grounds
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Join us for a greener and healthier campus.
+                    </p>
+
+                    <div class="event-actions">
+
+                        <a href="../pages/details.html">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="../pages/contact.html" class="register-btn">
+                            Register Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+        <div class="pagination">
+
+            <a href="#" class="current-page">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" aria-label="Next page">▷</a>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container footer-top">
+
+            <div class="footer-brand">
+
+                <div class="logo-text">
+
+                    <span class="brand">RUHUNA</span>
+                    <span class="sub-brand">E V E N T S</span>
+
+                </div>
+
+                <p>
+                    Discover. Connect. Celebrate.
+                    <br>
+                    Make every moment memorable.
+                </p>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <div class="links-row">
+
+                    <a href="../index.html">Home</a>
+                    <span>|</span>
+                    <a href="event.html">Events</a>
+                    <span>|</span>
+                    <a href="about.html">About</a>
+                    <span>|</span>
+                    <a href="contact.html">Contact</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 Ruhuna Events. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
